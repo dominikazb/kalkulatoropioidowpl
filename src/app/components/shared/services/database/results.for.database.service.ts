@@ -50,7 +50,7 @@ export class ResultsForDatabaseService {
   }
 
   private setOpioidToConvertTo(resultsForDatabase: ResultsForDatabase, results: Results): void {
-    if (results.opioidToConvertToIndex && !!Number.isNaN(results.opioidToConvertToIndex)) {
+    if (results.opioidToConvertToIndex && !Number.isNaN(results.opioidToConvertToIndex)) {
       if (results.opioidToConvertToIndex !== 0) {
         resultsForDatabase.setOpioidToConvertTo(results.opioidToConvertTo.description);
       }

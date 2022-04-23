@@ -6,10 +6,10 @@ import {Injectable} from '@angular/core';
 export class DatabaseService {
 
   // TODO: change this URL when ready
-  public url = 'http://localhost:8080/opioid-results';
+  public url = 'https://medutools-db-default-rtdb.firebaseio.com/opioids.json';
 
   defaultHeaders = new HttpHeaders({
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
   });
 
   defaultOptions = {headers: this.defaultHeaders};
