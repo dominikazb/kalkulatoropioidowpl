@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.openModal();
+    setTimeout(() => this.openModal(), 500);
   }
 
   public openModal(): void {

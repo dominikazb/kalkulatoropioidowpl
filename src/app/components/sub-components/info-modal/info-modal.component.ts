@@ -4,8 +4,7 @@ import {BsModalRef} from 'ngx-bootstrap/modal';
 import {ContentService} from '../../shared/services/content/content.service';
 
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'info-modal',
+  selector: 'app-info-modal',
   templateUrl: './info-modal.component.html',
   styleUrls: ['./info-modal.component.css']
 })
