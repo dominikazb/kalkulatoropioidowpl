@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {InfoModalComponent} from './components/sub-components/info-modal/info-modal.component';
 import {BsModalRef, BsModalService, ModalOptions} from 'ngx-bootstrap/modal';
-import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -17,12 +16,11 @@ export class AppComponent implements OnInit {
   };
   modalRef: BsModalRef;
 
-  constructor(private modalService: BsModalService,
-              private cookieService: CookieService) {
+  constructor(private modalService: BsModalService) {
   }
 
   ngOnInit(): void {
-    this.openModal();
+    // this.openModal();
   }
 
   public openModal(): void {
