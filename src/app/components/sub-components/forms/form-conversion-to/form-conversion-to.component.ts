@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {UntypedFormGroup} from '@angular/forms';
 import {Opioid} from '../../../shared/model/opioid/opioid';
 import {OpioidService} from '../../../shared/services/opioid/opioid.service';
 import {FormsService} from '../../../shared/services/form/forms.service';
@@ -12,7 +12,7 @@ import {FormsService} from '../../../shared/services/form/forms.service';
 export class FormConversionToComponent implements OnInit {
 
   // @ts-ignore
-  @Input() parentFormGroup: FormGroup;
+  @Input() parentFormGroup: UntypedFormGroup;
 
   public opioids: Opioid[] = [];
   public conversionToText = 'Konwersja na:';

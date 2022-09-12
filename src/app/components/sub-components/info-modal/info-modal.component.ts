@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import {BsModalRef} from 'ngx-bootstrap/modal';
 import {ContentService} from '../../shared/services/content/content.service';
 
@@ -10,7 +10,7 @@ import {ContentService} from '../../shared/services/content/content.service';
 })
 export class InfoModalComponent implements OnInit {
 
-  public infoModalForm: FormGroup;
+  public infoModalForm: UntypedFormGroup;
 
   constructor(public contentService: ContentService,
               public modalRef: BsModalRef) {}
@@ -20,10 +20,10 @@ export class InfoModalComponent implements OnInit {
   }
 
   public buildForm(): void {
-    this.infoModalForm = new FormGroup({
-      checkBox1: new FormControl(false, Validators.requiredTrue),
-      checkBox2: new FormControl(false, Validators.requiredTrue),
-      checkBox3: new FormControl(false, Validators.requiredTrue)
+    this.infoModalForm = new UntypedFormGroup({
+      checkBox1: new UntypedFormControl(false, Validators.requiredTrue),
+      checkBox2: new UntypedFormControl(false, Validators.requiredTrue),
+      checkBox3: new UntypedFormControl(false, Validators.requiredTrue)
     });
   }
 

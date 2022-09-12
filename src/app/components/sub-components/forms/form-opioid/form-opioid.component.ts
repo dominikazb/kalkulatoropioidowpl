@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {UntypedFormGroup} from '@angular/forms';
 import {OpioidService} from '../../../shared/services/opioid/opioid.service';
 import {Opioid} from '../../../shared/model/opioid/opioid';
 import {FormsService} from '../../../shared/services/form/forms.service';
@@ -13,7 +13,7 @@ export class FormOpioidComponent implements OnInit {
 
   @Input() name: string;
   // @ts-ignore
-  @Input() parentFormGroup: FormGroup;
+  @Input() parentFormGroup: UntypedFormGroup;
   public opioids: Opioid[] = [];
   public numberOfDoses: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   public units: string[] = ['mg', 'μg'];

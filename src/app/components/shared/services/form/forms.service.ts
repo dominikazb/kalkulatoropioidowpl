@@ -1,4 +1,4 @@
-import {FormControl, FormGroup} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup} from '@angular/forms';
 import {Results} from '../../model/results/results';
 import {Injectable} from '@angular/core';
 import {OpioidResults} from '../../model/results/opioid.results';
@@ -26,7 +26,7 @@ export class FormsService {
     doseReduction: 'doseReduction'
   };
 
-  public fillFormOpioid(name: string, opioidResults?: OpioidResults): FormGroup {
+  public fillFormOpioid(name: string, opioidResults?: OpioidResults): UntypedFormGroup {
     if (opioidResults) {
       return this.fillForm(name, opioidResults.opioid.index, opioidResults.numberOfDoses, opioidResults.dose, opioidResults.unit);
     } else {
@@ -34,35 +34,35 @@ export class FormsService {
     }
   }
 
-  private fillForm(name: string, index: number, numberOfDoses: number, dose: any, unit: any): FormGroup {
-    return new FormGroup({
-      [name + this.formOpioidFields.index]: new FormControl(index),
-      [name + this.formOpioidFields.numberOfDoses]: new FormControl(numberOfDoses),
-      [name + this.formOpioidFields.dose]: new FormControl(dose),
-      [name + this.formOpioidFields.unit]: new FormControl(unit)
+  private fillForm(name: string, index: number, numberOfDoses: number, dose: any, unit: any): UntypedFormGroup {
+    return new UntypedFormGroup({
+      [name + this.formOpioidFields.index]: new UntypedFormControl(index),
+      [name + this.formOpioidFields.numberOfDoses]: new UntypedFormControl(numberOfDoses),
+      [name + this.formOpioidFields.dose]: new UntypedFormControl(dose),
+      [name + this.formOpioidFields.unit]: new UntypedFormControl(unit)
     });
   }
 
-  public fillFormFentanyl(results?: Results): FormGroup {
+  public fillFormFentanyl(results?: Results): UntypedFormGroup {
     return this.returnFormGroup(this.formFentanylFields.fentanylDose,
       results?.fentanyl.dose ? results.fentanyl.dose : 0);
   }
 
-  public fillFormBuprenorphine(results?: Results): FormGroup {
+  public fillFormBuprenorphine(results?: Results): UntypedFormGroup {
       return this.returnFormGroup(this.formBuprenorfineFields.buprenorphineDose,
         results?.buprenorphine.dose ? results.buprenorphine.dose : 0);
     }
 
-  private returnFormGroup(name: string, dose: number): FormGroup {
-    return new FormGroup({[name]: new FormControl(dose)});
+  private returnFormGroup(name: string, dose: number): UntypedFormGroup {
+    return new UntypedFormGroup({[name]: new UntypedFormControl(dose)});
   }
 
-  public fillFormConversionTo(results?: Results): FormGroup {
-    return new FormGroup({
-      [this.formConversionToFields.opioidToCovertTo]: new FormControl(
+  public fillFormConversionTo(results?: Results): UntypedFormGroup {
+    return new UntypedFormGroup({
+      [this.formConversionToFields.opioidToCovertTo]: new UntypedFormControl(
         results?.opioidToConvertToIndex ? results.opioidToConvertToIndex : 0
       ),
-      [this.formConversionToFields.doseReduction]: new FormControl(
+      [this.formConversionToFields.doseReduction]: new UntypedFormControl(
         results?.doseReduction ? results.doseReduction : 0
       )
     });
