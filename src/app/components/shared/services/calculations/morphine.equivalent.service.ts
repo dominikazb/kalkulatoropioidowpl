@@ -73,7 +73,7 @@ export class MorphineEquivalentService {
     return morphineEquivalentRange;
   }
 
-  public calculateMorphineEquivalentForBuprenorfinaPlaster(dailyDose: number): MinMax {
+  public calculateMorphineEquivalentForBuprenorphinePlaster(dailyDose: number): MinMax {
     return dailyDose ? new MinMax(dailyDose * 75, dailyDose * 115) : new MinMax(0, 0);
   }
 

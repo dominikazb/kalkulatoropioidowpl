@@ -42,7 +42,7 @@ export class CalculationsService {
     const fentanylME =
       this.morphineEquivalentService.calculateMorphineEquivalentForFentanylPlaster(results.fentanyl.dose);
     const buprenorphineME =
-      this.morphineEquivalentService.calculateMorphineEquivalentForBuprenorfinaPlaster(results.buprenorphine.dailyDose);
+      this.morphineEquivalentService.calculateMorphineEquivalentForBuprenorphinePlaster(results.buprenorphine.dailyDose);
 
     results.firstOpioid.setMorphineEquivalent(firstOpioidME);
     results.secondOpioid.setMorphineEquivalent(secondOpioidME);
