@@ -4,8 +4,9 @@
     <div class="content_inside_resultspage">
 
       <div *ngIf="!showResults">
-        <h5
-          class="text_color__darker_gray text-center padding_bottom_20px padding_top_30px">{{contentService.resultsTextData.noResultsText}}</h5>
+        <h5 class="text_color__darker_gray text-center padding_bottom_20px padding_top_30px">
+          {{contentService.resultsTextData.noResultsText}}
+        </h5>
       </div>
 
       <div *ngIf="showResults">

@@ -175,12 +175,31 @@ div.btn-toolbar {
 }
 
 a.pain-treatment-course {
-  color: gray;
+  color: white;
   text-decoration: none;
 }
 
 a.pain-treatment-course:hover {
-  text-decoration: underline;
+  color: blue;
+  text-decoration: none;
+}
+
+.pain-course-link-main-wrapper {
+  width: 100%;
+}
+
+.pain-link-wrapper {
+  width: 50%;
+  background: lightgray;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .pain-link-wrapper {
+    width: 100%;
+  }
 }
 
 .shift_bottom_7px {
