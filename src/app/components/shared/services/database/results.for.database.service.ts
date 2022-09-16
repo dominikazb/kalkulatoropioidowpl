@@ -12,6 +12,7 @@ export class ResultsForDatabaseService {
     this.setFentanylDailyDose(resultsForDatabase, results);
     this.setBuprenorphineDailyDose(resultsForDatabase, results);
     this.setOpioidToConvertTo(resultsForDatabase, results);
+    this.setKidneyFailure(resultsForDatabase, results);
     this.setDoseReduction(resultsForDatabase, results);
 
     return resultsForDatabase;
@@ -47,6 +48,10 @@ export class ResultsForDatabaseService {
 
   private setBuprenorphineDailyDose(resultsForDatabase: ResultsForDatabase, results: Results): void {
     resultsForDatabase.setBuprenorphineDailyDose(results.buprenorphine.dailyDose !== 0 ? results.buprenorphine.dailyDose : 0);
+  }
+
+  private setKidneyFailure(resultsForDatabase: ResultsForDatabase, results: Results): void {
+    resultsForDatabase.setKidneyFailure(results.kidneyCheckbox);
   }
 
   private setOpioidToConvertTo(resultsForDatabase: ResultsForDatabase, results: Results): void {

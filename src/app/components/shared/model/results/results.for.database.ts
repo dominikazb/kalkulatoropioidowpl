@@ -8,6 +8,7 @@ export class ResultsForDatabase {
   private thirdOpioidDailyDose: number;
   private fentanylDailyDose: number;
   private buprenorphineDailyDose: number;
+  private kidneyFailure: boolean;
   private opioidToConvertTo: string;
   private doseReduction: number;
 
@@ -32,6 +33,10 @@ export class ResultsForDatabase {
 
   public setBuprenorphineDailyDose(buprenorphineDailyDose: number): void {
     this.buprenorphineDailyDose = buprenorphineDailyDose;
+  }
+
+  public setKidneyFailure(kidneyFailure: boolean): void {
+    this.kidneyFailure = kidneyFailure;
   }
 
   public setOpioidToConvertTo(opioidToConvertTo: string): void {
