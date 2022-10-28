@@ -602,3 +602,8 @@ div.converted_opioid__wrapper {
 div.col-md-11.d-flex.text-justify.align-items-center {
   padding: 5px;
 }
+
+
+#zeroOpioid__wrapper {
+  display: none;
+}

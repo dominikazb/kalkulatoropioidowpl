@@ -17,7 +17,10 @@ import {ContentService} from '../shared/services/content/content.service';
 })
 export class ApplicationComponent implements OnInit {
 
+  public zeroOpioidText = '';
+
   public opioidConversionFormFields: any = {
+    zeroOpioid: 'zeroOpioid',
     firstOpioid: 'firstOpioid',
     secondOpioid: 'secondOpioid',
     thirdOpioid: 'thirdOpioid',
@@ -82,6 +85,7 @@ export class ApplicationComponent implements OnInit {
 
   private buildForm(): void {
     this.opioidConversionForm = new UntypedFormGroup({
+      zeroOpioid: new UntypedFormControl(),
       kidneyCheckbox: new UntypedFormControl(this.resultsService.results ? this.resultsService.results.kidneyCheckbox : false)
     });
 
@@ -194,6 +198,7 @@ export class ApplicationComponent implements OnInit {
   }
 
   public onSubmit(): void {
+    console.log(this.getControlValue('zeroOpioid'));
     this.setFormResults();
     this.router.navigate(['/results']).then(() => {});
   }
