@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {UntypedFormGroup} from '@angular/forms';
+import {FormGroup} from '@angular/forms';
 import {FormsService} from '../../../shared/services/form/forms.service';
 
 @Component({
@@ -10,7 +10,7 @@ import {FormsService} from '../../../shared/services/form/forms.service';
 export class FormFentanylComponent {
 
   // @ts-ignore
-  @Input() parentFormGroup: UntypedFormGroup;
+  @Input() parentFormGroup: FormGroup;
 
   public titleText = 'Fentanyl transdermalnie:';
   public fentanylDoses: number[] = [0, 12, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300];

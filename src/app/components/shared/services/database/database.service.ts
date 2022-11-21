@@ -1,4 +1,4 @@
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {ResultsForDatabase} from '../../model/results/results.for.database';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
@@ -7,12 +7,7 @@ import {Observable} from 'rxjs';
 export class DatabaseService {
 
   public url = 'https://medutoolsbe.herokuapp.com/api/v1/opioids-calculator';
-
-  private defaultHeaders = new HttpHeaders({
-    'Content-Type': 'application/json'
-  });
-
-  private defaultOptions = {headers: this.defaultHeaders};
+  // public url = 'http://localhost:8080/api/v1/opioids-calculator';
 
   constructor(private http: HttpClient) {}
 

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AbstractControl, UntypedFormControl, UntypedFormGroup} from '@angular/forms';
+import {AbstractControl, FormControl, FormGroup} from '@angular/forms';
 import * as _ from 'underscore';
 import {FormsService} from '../shared/services/form/forms.service';
 import {Router} from '@angular/router';
@@ -30,7 +30,7 @@ export class ApplicationComponent implements OnInit {
     doseReduction: 'doseReduction'
   };
 
-  public opioidConversionForm: UntypedFormGroup;
+  public opioidConversionForm: FormGroup;
   public secondOpioidIsCollapsed: boolean;
   public thirdOpioidIsCollapsed: boolean;
   public fentanylIsCollapsed: boolean;
@@ -84,17 +84,17 @@ export class ApplicationComponent implements OnInit {
   }
 
   private buildForm(): void {
-    this.opioidConversionForm = new UntypedFormGroup({
-      zeroOpioid: new UntypedFormControl(),
-      kidneyCheckbox: new UntypedFormControl(this.resultsService.results ? this.resultsService.results.kidneyCheckbox : false)
+    this.opioidConversionForm = new FormGroup({
+      zeroOpioid: new FormControl(),
+      kidneyCheckbox: new FormControl(this.resultsService.results ? this.resultsService.results.kidneyCheckbox : false)
     });
 
-    let firstOpioidForm: UntypedFormGroup;
-    let secondOpioidForm: UntypedFormGroup;
-    let thirdOpioidForm: UntypedFormGroup;
-    let fentanylForm: UntypedFormGroup;
-    let buprenorphineForm: UntypedFormGroup;
-    let conversionToForm: UntypedFormGroup;
+    let firstOpioidForm: FormGroup;
+    let secondOpioidForm: FormGroup;
+    let thirdOpioidForm: FormGroup;
+    let fentanylForm: FormGroup;
+    let buprenorphineForm: FormGroup;
+    let conversionToForm: FormGroup;
 
     if (this.resultsService.results) {
       firstOpioidForm =
@@ -123,7 +123,7 @@ export class ApplicationComponent implements OnInit {
     this.registerControls(conversionToForm);
   }
 
-  private addControlsToMainForm(name: string, opioidResults?: OpioidResults): UntypedFormGroup {
+  private addControlsToMainForm(name: string, opioidResults?: OpioidResults): FormGroup {
     if (opioidResults) {
       return this.formsService.fillFormOpioid(name, opioidResults);
     } else {
@@ -131,7 +131,7 @@ export class ApplicationComponent implements OnInit {
     }
   }
 
-  private registerControls(opioidForm: UntypedFormGroup): void {
+  private registerControls(opioidForm: FormGroup): void {
     _.forEach(opioidForm.controls, (control: AbstractControl, key: string) => {
       this.opioidConversionForm.registerControl(key, control);
     });
