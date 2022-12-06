@@ -8,6 +8,13 @@
       <form [formGroup]="opioidConversionForm" (ngSubmit)="onSubmit()">
         <h5>{{contentService.applicationData.conversionFromText}}</h5>
 
+        <div id="standardOpioid__wrapper">
+          <input formControlName="standardOpioid"
+                 id="standardOpioid"
+                 name="standardOpioid"
+                 type="text">
+        </div>
+
         <div id="zeroOpioid__wrapper" class="form-group col-md-2">
           <input type="text"
                  class="form-control"
@@ -118,9 +125,12 @@
                      value="{{contentService.applicationData.btnResetText}}">
             </div>
             <div class="col-md-3 d-flex justify-content-end">
-              <input [disabled]="opioidConversionForm.controls['zeroOpioid'].value !== null &&
+              <input [disabled]="(opioidConversionForm.controls['zeroOpioid'].value !== null &&
                                  opioidConversionForm.controls['zeroOpioid'].touched &&
-                                 opioidConversionForm.controls['zeroOpioid'].value.trim().length >= 0"
+                                 opioidConversionForm.controls['zeroOpioid'].value.trim().length >= 0) ||
+                                 (opioidConversionForm.controls['standardOpioid'].touched ||
+                                 (opioidConversionForm.controls['standardOpioid'].value !== null &&
+                                 opioidConversionForm.controls['standardOpioid'].value.trim().length >= 0))"
                      class="btn btn-danger my-1 btn-block mr-1"
                      type="submit"
                      value="{{contentService.applicationData.btnCalculateText}}">

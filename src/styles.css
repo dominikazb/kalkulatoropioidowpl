@@ -584,6 +584,10 @@ table.table {
   }
 }
 
+#standardOpioid__wrapper {
+  display: none;
+}
+
 select.form-control {
   transition: none;
 }

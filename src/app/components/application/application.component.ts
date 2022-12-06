@@ -85,6 +85,7 @@ export class ApplicationComponent implements OnInit {
 
   private buildForm(): void {
     this.opioidConversionForm = new FormGroup({
+      standardOpioid: new FormControl(),
       zeroOpioid: new FormControl(),
       kidneyCheckbox: new FormControl(this.resultsService.results ? this.resultsService.results.kidneyCheckbox : false)
     });
