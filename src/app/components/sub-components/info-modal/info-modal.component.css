@@ -4,6 +4,15 @@
   width: 100%;
 }
 
+.label__text {
+  font-size: 14px;
+}
+
+.agree_to_license__wrapper {
+  font-size: 15px;
+  color: red;
+}
+
 div.modal-header {
   padding-top:30px;
   padding-bottom:20px;

@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ResultsComponent} from './components/results/results.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrandingFooterComponent} from './components/sub-components/branding-footer/branding-footer.component';
 import {ApplicationComponent} from './components/application/application.component';
 import {FormOpioidComponent} from './components/sub-components/forms/form-opioid/form-opioid.component';
@@ -34,6 +34,8 @@ import {KidneyFailureComponent} from './components/sub-components/forms/kidney-f
 import {DatabaseService} from './components/shared/services/database/database.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ResultsForDatabaseService} from './components/shared/services/database/results.for.database.service';
+import {NgxMaskModule} from 'ngx-mask';
+
 
 @NgModule({
   declarations: [
@@ -56,16 +58,18 @@ import {ResultsForDatabaseService} from './components/shared/services/database/r
     ResultsSumUpComponent,
     PlasterListComponent
   ],
-  imports: [
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    HttpClientModule,
-    NgbModule,
-    ModalModule.forRoot(),
-    ReactiveFormsModule,
-    RouterModule
-  ],
+    imports: [
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        BrowserModule,
+        HttpClientModule,
+        NgbModule,
+        NgxMaskModule.forRoot(),
+        ModalModule.forRoot(),
+        ReactiveFormsModule,
+        RouterModule,
+        FormsModule
+    ],
   providers: [
     CalculationsService,
     ContentService,
