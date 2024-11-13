@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   public openModal(): void {
-    if (localStorage.getItem('modalWasOpen') !== 'true') {
+    if (localStorage.getItem('hideModal') !== 'true') {
       this.modalRef = this.modalService.show(InfoModalComponent, this.modalConfig);
     }
   }

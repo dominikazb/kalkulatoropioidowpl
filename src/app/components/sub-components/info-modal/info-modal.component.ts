@@ -70,7 +70,7 @@ export class InfoModalComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    localStorage.setItem('modalWasOpen', 'true');
+    localStorage.setItem('hideModal', 'true');
     this.modalRef.hide();
   }
 }
