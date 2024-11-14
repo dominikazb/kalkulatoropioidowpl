@@ -59,9 +59,7 @@ export class ContentService {
     morphineEquivalentText: string,
     goBackText: string,
     noResultsText: string,
-    contactText: string,
     warningText: string,
-    contactTextInfo: string,
     kidneyFailureText: string
   } = resultsContent;
 
@@ -70,7 +68,14 @@ export class ContentService {
     FentanylTransdermal: { index: string, name: string, text1: string, text2: string, text3: string, text4: string },
     Oxycodone: { index: string, name: string, text1: string, text2: string, text3: string },
     kidneyFailure: { text1: string, text2: string, text3: string },
-    chplLinks: { buprenorphineLink: string, oxydolorLink: string, oxydolorFastLink: string, oxylaxonLink: string }
+    chplLinks: {
+      buprenorphine_link: string,
+      oxydolor_link: string,
+      oxydolor_fast_link: string,
+      oxylaxon_link: string,
+      vendal_retard_link: string,
+      submena_link: string
+    }
   } = glpharmaContent;
 
   public opioidInfoData: {

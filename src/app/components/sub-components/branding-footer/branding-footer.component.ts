@@ -6,5 +6,4 @@ import {Component, Input} from '@angular/core';
 })
 export class BrandingFooterComponent {
   @Input() showBrandingFooterText: boolean;
-  @Input() showPainCourseInfo: boolean;
 }

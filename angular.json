@@ -1,5 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "defaultProject": "kalkulatoropioidow",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -66,6 +67,14 @@
                   "maximumError": "4kb"
                 }
               ]
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           }
         },
@@ -77,6 +86,9 @@
           "configurations": {
             "production": {
               "browserTarget": "kalkulatoropioidow:build:production"
+            },
+            "development": {
+              "browserTarget": "kalkulatoropioidow:build:development"
             }
           }
         },
@@ -127,6 +139,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "kalkulatoropioidow:serve:production"
+            },
+            "development": {
+              "devServerTarget": "kalkulatoropioidow:serve:development"
             }
           }
         }

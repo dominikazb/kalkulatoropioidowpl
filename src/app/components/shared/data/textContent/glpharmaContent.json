@@ -25,9 +25,11 @@
     "text3": ")."
   },
   "chplLinks": {
-    "buprenorphineLink": "http://medutools.pl/wp-content/uploads/2021/06/20201030-Melodyn_SPC.pdf",
-    "oxydolorLink": "http://medutools.pl/wp-content/uploads/2021/06/20200706-Oxydolor-SPC_hl.pdf",
-    "oxydolorFastLink": "http://medutools.pl/wp-content/uploads/2021/06/20191004-Oxydolor-Fast-SPC.pdf",
-    "oxylaxonLink": "http://medutools.pl/wp-content/uploads/2021/06/20190605-Oxylaxon-SPC.pdf"
+    "buprenorphine_link": "https://gl-pharma.com/pl/products/melodyn/",
+    "oxydolor_link": "https://gl-pharma.com/pl/products/oxydolor/",
+    "oxydolor_fast_link": "https://gl-pharma.com/pl/products/oxydolor-fast/",
+    "oxylaxon_link": "https://gl-pharma.com/pl/products/oxylaxon/",
+    "vendal_retard_link": "https://gl-pharma.com/pl/products/vendal-retard/",
+    "submena_link": "https://gl-pharma.com/pl/products/submena/"
   }
 }

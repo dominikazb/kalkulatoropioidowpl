@@ -2,11 +2,19 @@
   <span class="header_white">{{results.opioidToConvertTo.description}}:</span>
   <span *ngIf="results.opioidToConvertToIndex === opioidIndices.BuprenorphineTransdermal.valueOf()">
     <br>
-    np. <a class="white_text__link" href="{{contentService.glpharmaData['chplLinks'].buprenorphineLink}}" target="_blank">Melodyn</a>
+    np. <a class="white_text__link" href="{{contentService.glpharmaData['chplLinks'].buprenorphine_link}}" target="_blank">Melodyn</a>
   </span>
   <span *ngIf="results.opioidToConvertToIndex === opioidIndices.Oxycodone.valueOf()">
     <br>
-    np. <a class="white_text__link" href="{{contentService.glpharmaData['chplLinks'].oxydolorLink}}" target="_blank">Oxydolor</a>
+    np. <a class="white_text__link" href="{{contentService.glpharmaData['chplLinks'].oxydolor_link}}" target="_blank">Oxydolor</a>
+  </span>
+  <span *ngIf="results.opioidToConvertToIndex === opioidIndices.FentanylPills.valueOf()">
+    <br>
+    np. <a class="white_text__link" href="{{contentService.glpharmaData['chplLinks'].submena_link}}" target="_blank">Submena</a>
+  </span>
+  <span *ngIf="results.opioidToConvertToIndex === opioidIndices.MorphinePills.valueOf()">
+    <br>
+    np. <a class="white_text__link" href="{{contentService.glpharmaData['chplLinks'].vendal_retard_link}}" target="_blank">Vendal retard</a>
   </span>
 </div>
 <table class="table text-white">
