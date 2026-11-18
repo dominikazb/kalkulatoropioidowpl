@@ -15,21 +15,9 @@
   "Oxycodone": {
     "index": 10,
     "name": "Oksykodon, chlorowodorek (tbl. doustne, i.v., s.c.)",
-    "text1": "Rozważ zastosowanie połączenia oksykodonu z naloksonem w przypadku konieczności redukcji zespołu poopioidowej dysfunkcji jelit lub zaparć występujących u pacjenta w trakcie leczenia lekami opioidowymi (zastosuj np.",
-    "text2": "Oxylaxon",
-    "text3": ")."
+    "text1": "Rozważ zastosowanie połączenia oksykodonu z naloksonem w przypadku konieczności redukcji zespołu poopioidowej dysfunkcji jelit lub zaparć występujących u pacjenta w trakcie leczenia lekami opioidowymi."
   },
   "kidneyFailure": {
-    "text1": "U pacjentów z niewydolnością nerek rekomendowanym opioidem jest buprenorfina (np. ",
-    "text2": "Melodyn",
-    "text3": ")."
-  },
-  "chplLinks": {
-    "buprenorphine_link": "https://gl-pharma.com/pl/products/melodyn/",
-    "oxydolor_link": "https://gl-pharma.com/pl/products/oxydolor/",
-    "oxydolor_fast_link": "https://gl-pharma.com/pl/products/oxydolor-fast/",
-    "oxylaxon_link": "https://gl-pharma.com/pl/products/oxylaxon/",
-    "vendal_retard_link": "https://gl-pharma.com/pl/products/vendal-retard/",
-    "submena_link": "https://gl-pharma.com/pl/products/submena/"
+    "text1": "U pacjentów z niewydolnością nerek rekomendowanym opioidem jest buprenorfina."
   }
 }

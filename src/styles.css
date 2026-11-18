@@ -165,27 +165,6 @@ div.btn-toolbar {
   width: auto;
 }
 
-.glpharma_footer__wrapper {
-  margin-top: 50px;
-}
-
-.glpharma_banner {
-  height: 300px;
-  width: auto;
-}
-
-@media (max-width: 700px) {
-  .glpharma_banner {
-    width: 98%;
-    height: auto;
-  }
-}
-
-.logo_glpharma {
-  height: 35px;
-  width: auto;
-}
-
 .logo__wrapper {
   height: 70px;
 }

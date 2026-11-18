@@ -67,15 +67,7 @@ export class ContentService {
     BuprenorphineTransdermal: { index: string, name: string, text1: string },
     FentanylTransdermal: { index: string, name: string, text1: string, text2: string, text3: string, text4: string },
     Oxycodone: { index: string, name: string, text1: string, text2: string, text3: string },
-    kidneyFailure: { text1: string, text2: string, text3: string },
-    chplLinks: {
-      buprenorphine_link: string,
-      oxydolor_link: string,
-      oxydolor_fast_link: string,
-      oxylaxon_link: string,
-      vendal_retard_link: string,
-      submena_link: string
-    }
+    kidneyFailure: { text1: string, text2: string, text3: string }
   } = glpharmaContent;
 
   public opioidInfoData: {
