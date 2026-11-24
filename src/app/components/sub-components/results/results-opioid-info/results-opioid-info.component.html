@@ -1,0 +1,57 @@
+<div class="padding_top_30px"></div>
+<div class="very_light_gray_background">
+  <span class="header_dark">Wykorzystane przeliczniki</span>
+  <hr class="light_line">
+
+  <ng-container *ngFor="let opioidNo of opioidsToShow">
+    <div class="padding_left_right__10px">
+      <ng-container *ngIf="contentService.opioidInfoData[opioidNo].index !== opioidIndices.FentanylTransdermal.valueOf() &&
+      contentService.opioidInfoData[opioidNo].index !== opioidIndices.Methadone.valueOf()">
+        <span class="fontsize_14 text_color__darker_gray">
+          {{contentService.opioidInfoData[opioidNo].text1}} <b class="text_color__black">{{contentService.opioidInfoData[opioidNo].text2}}</b>
+          {{contentService.opioidInfoData[opioidNo].text3}}<br>
+          {{contentService.opioidInfoData[opioidNo].text4}}<br>
+          {{contentService.opioidInfoData[opioidNo].text5}}
+        </span>
+        <hr>
+      </ng-container>
+
+      <ng-container *ngIf="contentService.opioidInfoData[opioidNo].index === opioidIndices.FentanylTransdermal.valueOf()">
+        <span class="fontsize_14 text_color__darker_gray">
+          {{contentService.opioidInfoData[opioidNo].text1}} <b class="text_color__black">{{contentService.opioidInfoData[opioidNo].text2}}</b>
+          {{contentService.opioidInfoData[opioidNo].text3}}<br><br>
+          {{contentService.opioidInfoData[opioidNo].text4}}<br>
+          {{contentService.opioidInfoData[opioidNo].text5}}<br>
+          {{contentService.opioidInfoData[opioidNo].text6}}<br>
+          {{contentService.opioidInfoData[opioidNo].text7}}<br>
+          {{contentService.opioidInfoData[opioidNo].text8}}<br>
+          {{contentService.opioidInfoData[opioidNo].text9}}<br>
+          {{contentService.opioidInfoData[opioidNo].text10}}<br>
+          {{contentService.opioidInfoData[opioidNo].text11}}<br>
+          {{contentService.opioidInfoData[opioidNo].text12}}<br>
+          {{contentService.opioidInfoData[opioidNo].text13}}<br>
+          {{contentService.opioidInfoData[opioidNo].text14}}<br>
+          {{contentService.opioidInfoData[opioidNo].text15}}<br>
+          {{contentService.opioidInfoData[opioidNo].text16}}<br><br>
+          {{contentService.opioidInfoData[opioidNo].text17}}
+        </span>
+        <hr>
+      </ng-container>
+
+      <ng-container *ngIf="contentService.opioidInfoData[opioidNo].index === opioidIndices.Methadone.valueOf()">
+        <span class="fontsize_14 text_color__darker_gray">
+          <b class="text_color__black">{{contentService.opioidInfoData[opioidNo].text1}}</b><br><br>
+          {{contentService.opioidInfoData[opioidNo].text2}} <b class="text_color__black">{{contentService.opioidInfoData[opioidNo].text3}}</b>
+          {{contentService.opioidInfoData[opioidNo].text4}}<br><br>
+          {{contentService.opioidInfoData[opioidNo].text5}}<br>
+          {{contentService.opioidInfoData[opioidNo].text6}}<br>
+          {{contentService.opioidInfoData[opioidNo].text7}}<br>
+          {{contentService.opioidInfoData[opioidNo].text8}}<br><br>
+          {{contentService.opioidInfoData[opioidNo].text9}}<br>
+          {{contentService.opioidInfoData[opioidNo].text10}}
+        </span>
+        <hr>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,45 @@
+<div class="main_div">
+  <div class="empty_space_20px"></div>
+  <div class="content">
+    <div class="content_inside_resultspage">
+
+      <div *ngIf="!showResults">
+        <h5 class="text_color__darker_gray text-center padding_bottom_20px padding_top_30px">
+          {{contentService.resultsTextData.noResultsText}}
+        </h5>
+      </div>
+
+      <div *ngIf="showResults">
+        <ng-container *ngIf="opioidService.oneOfOpioidsWasChosen(results)">
+          <results-sum-up></results-sum-up>
+          <div class="padding_bottom_20px padding_top_20px"></div>
+        </ng-container>
+
+        <results-conversion-to></results-conversion-to>
+
+        <kidney-failure></kidney-failure>
+
+        <rescue-dose></rescue-dose>
+
+        <results-glpharma-info></results-glpharma-info>
+
+        <ng-container *ngIf="results.opioidToConvertToIndex !== opioidIndices.MorphinePills.valueOf()">
+          <results-opioid-info></results-opioid-info>
+        </ng-container>
+
+        <div>
+          <div class="padding_top_20px padding_bottom_20px"></div>
+          <p class="fontsize_14 text_color__darker_gray text-center">
+            {{contentService.resultsTextData.warningText}}
+          </p>
+        </div>
+
+        <app-branding-footer
+          [showBrandingFooterText]=false></app-branding-footer>
+        <br>
+
+      </div>
+    </div>
+  </div>
+  <div class="empty_space_20px"></div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "title" : "Kalkulator konwersji leków opioidowych",
+  "addAnotherText": "dodaj kolejny...",
+  "fentanylText": "fentanyl (transdermalnie)",
+  "buprenorphineText": "buprenorfina (transdermalnie)",
+  "conversionFromText": "Konwersja z:",
+  "optionallyText": "Opcjonalnie",
+  "btnResetText": "Wyczyść",
+  "kidneyCheckbox": "Pacjent z niewydolnością nerek",
+  "btnCalculateText": "Przelicz"
+}

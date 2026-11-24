@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "kalkulatoropioidow.pl — Opioid Rotation Calculator (frontend)"
+message: "If you use this software, please cite both the software (this record) and the accompanying article listed under preferred-citation."
+type: software
+authors:
+  - family-names: Biesiada
+    given-names: Aleksander
+  - family-names: Żurek-Biesiada
+    given-names: Dominika
+  - family-names: Mastalerz-Migas
+    given-names: Agnieszka
+copyright: "Copyright (C) 2022-2026 Wydawnictwo Interaktywne Medutools Sp. z o.o."
+repository-code: "https://github.com/dominikazb/kalkulatoropioidowpl"
+url: "https://kalkulatoropioidow.pl"
+license: AGPL-3.0-or-later
+version: "1.0.0"
+date-released: "2026-11-23"
+doi: "10.5281/zenodo.XXXXXXX"   # <-- replace after the first GitHub release is archived on Zenodo
+preferred-citation:
+  type: article
+  title: "Translating opioid rotation rules into code: development, implementation and open-source release of a free web-based opioid dose conversion calculator (kalkulatoropioidow.pl)"
+  authors:
+    - family-names: Biesiada
+      given-names: Aleksander
+    - family-names: Żurek-Biesiada
+      given-names: Dominika
+    - family-names: Mastalerz-Migas
+      given-names: Agnieszka
+  journal: "BMC Medical Informatics and Decision Making"
+  year: 2026
+  doi: "10.1186/XXXXX"   # <-- replace with the article DOI once assigned

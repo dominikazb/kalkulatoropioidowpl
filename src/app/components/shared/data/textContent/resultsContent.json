@@ -1,0 +1,9 @@
+{
+  "resultsText" : "Dobowy ekwiwalent morfiny",
+  "opioidText" : "Opioid",
+  "dailyDoseText" : "Dawka dzienna",
+  "morphineEquivalentText" : "Ekwiwalent morfiny",
+  "noResultsText" : "Nie wybrano żadnych leków.",
+  "warningText": "W przypadku wątpliwości skorzystaj z informacji zawartej w charakterystyce produktu leczniczego.",
+  "kidneyFailureText": "Niewydolność nerek"
+}

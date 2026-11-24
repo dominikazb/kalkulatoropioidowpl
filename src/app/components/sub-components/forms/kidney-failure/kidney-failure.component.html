@@ -1,0 +1,11 @@
+<ng-container *ngIf="kidneyCheckboxWasChecked && opioidService.opioidToConvertToWasChosen(resultsService.results)">
+  <div class="padding_top_30px"></div>
+  <div class="very_light_gray_background">
+    <span class="header_dark">{{contentService.resultsTextData.kidneyFailureText}}</span>
+    <hr class="light_line">
+    <span class="fontsize_14">
+      {{contentService.glpharmaData['kidneyFailure'].text1}}
+    </span>
+    <div class="padding_bottom_10px"></div>
+  </div>
+</ng-container>

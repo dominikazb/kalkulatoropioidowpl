@@ -1,0 +1,42 @@
+<div class="dark_gray_background">
+  <span class="header_white">{{results.opioidToConvertTo.description}}:</span>
+</div>
+<table class="table text-white">
+  <thead>
+  <tr>
+    <th scope="col" style="width: 50%" class="padding_0"></th>
+    <th scope="col" style="width: 50%" class="padding_0"></th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dawka dobowa:</td>
+      <td>
+        <span *ngIf="results.opioidToConvertToDoseRange.min === results.opioidToConvertToDoseRange.max">
+          {{results.opioidToConvertToDoseRange.min | number : '1.2-2'}} {{results.doseForResults}}
+        </span>
+        <span *ngIf="results.opioidToConvertToDoseRange.min !== results.opioidToConvertToDoseRange.max">
+          {{results.opioidToConvertToDoseRange.min | number : '1.2-2'}}
+          - {{results.opioidToConvertToDoseRange.max | number : '1.2-2'}}
+          {{results.doseForResults}}
+        </span>
+      </td>
+    </tr>
+
+    <ng-container *ngIf="results.doseReduction > 0">
+      <tr>
+        <td>Dawka dobowa zredukowana o {{results.doseReduction}}%:</td>
+        <td>
+          <span *ngIf="results.opioidToConvertToReducedDoseRange.min === results.opioidToConvertToReducedDoseRange.max">
+            {{results.opioidToConvertToReducedDoseRange.min | number : '1.2-2'}} {{results.doseForResults}}
+          </span>
+          <span *ngIf="results.opioidToConvertToReducedDoseRange.min !== results.opioidToConvertToReducedDoseRange.max">
+            {{results.opioidToConvertToReducedDoseRange.min | number : '1.2-2'}}
+            - {{results.opioidToConvertToReducedDoseRange.max | number : '1.2-2'}}
+            {{results.doseForResults}}
+          </span>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

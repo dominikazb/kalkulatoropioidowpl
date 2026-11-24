@@ -1,0 +1,96 @@
+<div class="dark_gray_background">
+  <span class="header_white">{{results.opioidToConvertTo.description}}:</span>
+</div>
+<table class="table text_color__light_gray">
+  <thead>
+  <tr>
+    <th scope="col" style="width: 70%" class="padding_0"></th>
+    <th scope="col" style="width: 30%" class="padding_0"></th>
+  </tr>
+  </thead>
+  <tbody>
+    <!-- ------------- Dawka dzienna ------------- -->
+    <tr>
+      <td>Dawka dzienna:</td>
+      <td>
+        <span *ngIf="results.opioidToConvertToDoseRange.min === results.opioidToConvertToDoseRange.max">
+          {{results.opioidToConvertToDoseRange.min | number : '1.2-2'}} {{results.doseForResults}}
+        </span>
+        <span *ngIf="results.opioidToConvertToDoseRange.min !== results.opioidToConvertToDoseRange.max">
+          {{results.opioidToConvertToDoseRange.min | number : '1.2-2'}}
+          - {{results.opioidToConvertToDoseRange.max | number : '1.2-2'}}
+          {{results.doseForResults}}
+        </span>
+      </td>
+    </tr>
+
+    <!-- ------------- podawaj Metadon w dawce % co 12 h ------------- -->
+    <tr>
+      <td colspan="2" class="fontsize_14 text_color__light_gray_darker">
+          {{contentService.opioidInfoData[methadoneIndex].methadoneDoseText1}}
+          {{methadoneProposedDailyDose.min | number : '1.2-2'}} -
+          {{methadoneProposedDailyDose.max | number : '1.2-2'}}
+          {{contentService.opioidInfoData[methadoneIndex].methadoneDoseText4}}
+      </td>
+    </tr>
+
+    <!-- ------------- Dawka dzienna zredukowana ------------- -->
+    <ng-container *ngIf="results.doseReduction > 0">
+      <tr>
+        <td>Dawka zredukowana o {{results.doseReduction}}%:</td>
+        <td>
+          <span *ngIf="results.opioidToConvertToReducedDoseRange.min === results.opioidToConvertToReducedDoseRange.max">
+            {{results.opioidToConvertToReducedDoseRange.min | number : '1.2-2'}} {{results.doseForResults}}
+          </span>
+          <span *ngIf="results.opioidToConvertToReducedDoseRange.min !== results.opioidToConvertToReducedDoseRange.max">
+            {{results.opioidToConvertToReducedDoseRange.min | number : '1.2-2'}}
+            - {{results.opioidToConvertToReducedDoseRange.max | number : '1.2-2'}}
+            {{results.doseForResults}}
+          </span>
+        </td>
+      </tr>
+
+      <!-- ------------- podawaj Metadon w dawce % co 12 h ------------- -->
+      <tr>
+        <td colspan="2" class="fontsize_14 text_color__light_gray_darker">
+            {{contentService.opioidInfoData[methadoneIndex].methadoneDoseText1}}
+            {{methadoneProposedDailyDoseReduced.min | number : '1.2-2'}} -
+            {{methadoneProposedDailyDoseReduced.max | number : '1.2-2'}}
+            {{contentService.opioidInfoData[methadoneIndex].methadoneDoseText4}}
+        </td>
+      </tr>
+    </ng-container>
+
+    <!-- ------------- Dawka doraźna ------------- -->
+    <tr>
+      <td>
+        {{contentService.opioidInfoData[methadoneIndex].methadoneDoseText2}}
+      </td>
+      <td>
+        <span *ngIf="results.opioidToConvertToDoseRange.min === results.opioidToConvertToDoseRange.max">
+          {{methadoneSingleDose.min | number : '1.2-2'}} mg
+        </span>
+        <span *ngIf="results.opioidToConvertToDoseRange.min !== results.opioidToConvertToDoseRange.max">
+          {{methadoneSingleDose.min | number : '1.2-2'}} -
+          {{methadoneSingleDose.max | number : '1.2-2'}} mg
+        </span>
+      </td>
+    </tr>
+
+    <!-- ------------- Dawka doraźna zredukowana o ------------- -->
+    <tr *ngIf="results.doseReduction > 0">
+      <td>
+        {{contentService.opioidInfoData[methadoneIndex].methadoneDoseText3}} {{results.doseReduction}}%:
+      </td>
+      <td>
+        <span *ngIf="results.opioidToConvertToDoseRange.min === results.opioidToConvertToDoseRange.max">
+          {{methadoneSingleDoseReduced.min | number : '1.2-2'}} mg
+        </span>
+        <span *ngIf="results.opioidToConvertToDoseRange.min !== results.opioidToConvertToDoseRange.max">
+          {{methadoneSingleDoseReduced.min | number : '1.2-2'}} -
+          {{methadoneSingleDoseReduced.max | number : '1.2-2'}} mg
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

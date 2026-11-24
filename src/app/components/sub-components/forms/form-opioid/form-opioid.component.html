@@ -1,0 +1,44 @@
+<div [formGroup]="parentFormGroup">
+  <div class="row">
+    <div class="form-group col-md-6">
+      <select [formControlName]="name+formsService.formOpioidFields.index"
+              [id]="name+formsService.formOpioidFields.index"
+              [name]="name+formsService.formOpioidFields.index"
+              class="form-control">
+        <option selected disabled value=0>-- wybierz lek --</option>
+        <option *ngFor="let opioid of opioids" [value]="opioid.index">{{opioid.description}}</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-2">
+      <select [formControlName]="name+formsService.formOpioidFields.numberOfDoses"
+              [id]="name+formsService.formOpioidFields.numberOfDoses"
+              [name]="name+formsService.formOpioidFields.numberOfDoses"
+              class="form-control">
+        <option selected disabled value=0>razy/doba</option>
+        <option *ngFor="let number of numberOfDoses" [value]="number">{{number}}</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-2">
+      <input type="number"
+             min="0"
+             step="0.00001"
+             inputmode="decimal"
+             class="form-control"
+             [id]="name+formsService.formOpioidFields.dose"
+             [name]="name+formsService.formOpioidFields.dose"
+             placeholder="dawka"
+             [formControlName]="name+formsService.formOpioidFields.dose">
+    </div>
+
+    <div class="form-group col-md-2">
+      <select [formControlName]="name+formsService.formOpioidFields.unit"
+              [id]="name+formsService.formOpioidFields.unit"
+              [name]="name+formsService.formOpioidFields.unit"
+              class="form-control">
+        <option *ngFor="let unit of units" [value]="unit">{{unit}}</option>
+      </select>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,626 @@
+@media (max-width: 768px) {
+  body,html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background-color: #b79481;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 769px) {
+  body,html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background-image: url("./assets/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #b79481;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.empty_space_20px {
+  height: 20px;
+}
+
+@media (max-width: 999px) {
+  .main_div {
+    background-color: transparent;
+    width: 98%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1099px){
+  .main_div {
+    background-color: transparent;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .main_div {
+    background-color: transparent;
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1399px) {
+  .main_div {
+    background-color: transparent;
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .main_div {
+    background-color: transparent;
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.content {
+  background-color: white;
+  opacity: 0.93;
+  border-radius: 10px;
+  border: solid 1px #555;
+  box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .content_inside {
+    padding: 10px 10px 30px;
+  }
+}
+@media (min-width: 769px) {
+  .content_inside {
+    padding: 30px 20px;
+  }
+}
+
+.title {
+  color: #555555;
+  text-align: center;
+}
+
+.padding_bottom_10px {
+  padding-bottom: 10px;
+}
+
+.padding_bottom_20px {
+  padding-bottom: 20px;
+}
+
+.padding_top_5px {
+  padding-top: 5px;
+}
+
+.padding_top_10px {
+  padding-top: 10px;
+}
+
+.padding_top_15px {
+  padding-top: 15px;
+}
+
+.padding_top_20px {
+  padding-top: 20px;
+}
+
+.padding_top_30px {
+  padding-top:30px;
+}
+
+.text_color__gray {
+  color: #CCC;
+}
+
+.conversion_to_wrapper {
+  background-color: #E8E8E8;
+  border-radius: 10px;
+  padding-right:8px;
+  padding-left:8px;
+  padding-top:20px;
+}
+
+.converted_opioid__wrapper_top {
+  background-color: #F8F8F8;
+  border-radius: 10px;
+  padding-right:8px;
+  padding-left:8px;
+  padding-top:20px;
+}
+
+.converted_opioid__wrapper {
+  background-color: #F8F8F8;
+  border-radius: 10px;
+  padding: 10px 8px 3px;
+}
+
+.text_color__darker_gray {
+  color: #888;
+}
+
+div.btn-toolbar {
+  float: right;
+}
+
+.logo_ptmr {
+  height: 70px;
+  width: auto;
+}
+
+.logo__wrapper {
+  height: 70px;
+}
+
+a.pain-treatment-course {
+  color: white;
+  text-decoration: none;
+}
+
+a.pain-treatment-course:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.pain-course-link-main-wrapper {
+  width: 100%;
+}
+
+.pain-link-wrapper {
+  width: 50%;
+  background: lightgray;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .pain-link-wrapper {
+    width: 100%;
+  }
+}
+
+.shift_bottom_7px {
+  padding-top: 7px;
+  width: 100%;
+}
+
+h4, h6 {
+  margin: 0px;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+  background-color: #ac8e84;
+}
+
+a.link_beige {
+  text-decoration: none;
+  color: #ac8e84;
+}
+
+a.link_beige:hover {
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .display_none {
+    display: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+  .display_none {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  div.row {
+    text-align: center;
+    margin:0px;
+    transition: none;
+  }
+}
+@media (min-width: 769px) {
+  div.row {
+    text-align: justify;
+    margin:0px;
+    transition: none;
+  }
+}
+
+div {
+  width:100%;
+}
+
+@media (max-width: 768px) {
+  div.form-group.col-md-1 {
+    padding: 0px;
+  }
+  div.form-group.col-md-2 {
+    padding: 0px;
+  }
+  div.form-group.col-md-3 {
+    padding: 0px;
+  }
+  div.form-group.col-md-4 {
+    padding: 0px;
+  }
+  div.form-group.col-md-5 {
+    padding: 0px;
+  }
+  div.form-group.col-md-6 {
+    padding: 0px;
+  }
+  div.form-group.col-md-7 {
+    padding: 0px;
+  }
+  div.form-group.col-md-8 {
+    padding: 0px;
+  }
+  div.form-group.col-md-9 {
+    padding: 0px;
+  }
+  div.form-group.col-md-10 {
+    padding: 0px;
+  }
+  div.form-group.col-md-11 {
+    padding: 0px;
+  }
+  div.form-group.col-md-12 {
+    padding: 0px;
+  }
+}
+@media (min-width: 769px) {
+  div.form-group.col-md-1 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-2 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-3 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-4 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-5 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-6 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-7 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-8 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-9 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-10 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-11 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  div.form-group.col-md-12 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+
+
+/* =========== results =========== */
+
+/* ======== TABLES ON MOBILE DEVICES ======== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+@media only screen and (max-width: 800px), (min-device-width : 801px)
+and (max-device-width: 1024px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  td:before {
+    position: static;
+    color: grey;
+  }
+  td.table1:nth-of-type(1):before {
+    content: "Opioid:";
+  }
+  td.table1:nth-of-type(2):before {
+    content: "Dawka:";
+  }
+  td.table1:nth-of-type(3):before {
+    content: "Ekwiwalent morfiny:";
+  }
+}
+
+@media (max-width: 768px) {
+  .content_inside_resultspage {
+    padding: 10px 10px 50px;
+  }
+}
+@media (min-width: 769px) {
+  .content_inside_resultspage {
+    padding: 30px 20px;
+  }
+}
+
+hr.light_line {
+  border: 0.5px solid #C0C0C0;
+}
+
+a.error {
+  text-decoration: none;
+  color: white;
+}
+
+a.error:hover {
+  text-decoration: none;
+  color: yellow;
+}
+
+@media (max-width: 768px) {
+  .red_background {
+    padding: 5px 8px;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+  }
+}
+
+@media (min-width: 769px) {
+  .red_background {
+    padding: 10px 15px;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+  }
+}
+
+.text_color__black {
+  color: black;
+}
+
+.text_color__light_gray {
+  color: #E0E0E0;
+}
+
+.text_color__light_gray_darker {
+  color: #C8C8C8;
+}
+
+.header_white {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.header_dark {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.very_light_gray_background {
+  padding: 10px 15px;
+  background-color: #efeeee;
+  border-radius: 10px;
+  color: #888;
+}
+
+.light_gray_background {
+  padding: 10px 15px;
+  background-color: #c4c3c3;
+  border-radius: 10px;
+  color: white;
+}
+
+.dark_gray_background {
+  padding: 10px 15px;
+  background-color: #555555;
+  border-radius: 10px;
+  color: #E0E0E0;
+}
+
+.orange_background {
+  padding: 10px 15px;
+  background-color: #FFA500;
+  border-radius: 10px;
+  color: white;
+}
+
+.padding_left_right__10px {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.text_color__red {
+  color:red;
+}
+
+.fontsize_14 {
+  font-size: 14px;
+}
+
+.fontsize_25 {
+  font-size: 25px;
+}
+
+h5 {
+  margin: 0px;
+}
+
+a.white_text__link {
+  color: #B0B0B0;
+  text-decoration: underline;
+}
+
+a.white_text__link:hover {
+  color: #D3D3D3;
+  text-decoration: none;
+}
+
+a.light_gray_text__link {
+  color: #000;
+  text-decoration: underline;
+}
+
+a.light_gray_text__link:hover {
+  color: #CCC;
+  text-decoration: none;
+}
+
+ul.shift_left_10px {
+  margin-left: -10px;
+}
+
+ul.shift_left_20px {
+  margin-left: -20px;
+}
+
+th.padding_0 {
+  padding: 0px;
+}
+
+th.no_border {
+  padding: 0px;
+  border: none;
+}
+
+div.col-md-3.d-flex.justify-content-end {
+  padding: 0px;
+}
+
+table.table {
+  margin: 0px;
+}
+
+@media (max-width: 767px) {
+  h6.title.text_color__darker_gray {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  div.col-md-6.light_gray_background.text-center {
+    margin-top: 15px;
+  }
+}
+
+.not_collapsed {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .collapsed {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .collapsed {
+    display: block;
+  }
+}
+
+#standardOpioid__wrapper {
+  display: none;
+}
+
+select.form-control {
+  transition: none;
+}
+
+div.converted_opioid__wrapper {
+  transition: none;
+}
+
+@media (max-width: 768px) {
+  .padding_bottom_top_15_small_screen {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+div.col-md-11.d-flex.text-justify.align-items-center {
+  padding: 5px;
+}
+
+
+#zeroOpioid__wrapper {
+  display: none;
+}
+
+
+
+
+.license__link {
+  text-align: right;
+  font-size: 12px;
+}
+
+a.sourcecode_link {
+  color: #555555;
+  text-decoration: none;
+}
+
+a.sourcecode_link:hover {
+  color: #000000;
+  text-decoration: underline;
+}

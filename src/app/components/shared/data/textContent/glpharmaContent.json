@@ -1,0 +1,23 @@
+{
+  "BuprenorphineTransdermal": {
+    "index": 2,
+    "name": "Buprenorfina (transdermalnie)",
+    "text1": "Ostrożnie u pacjentów z nadmierną potliwością i gorączką - istnieje ryzyko zwiększenia stężenia substancji czynnej wskutek nadmiernego uwalniania substancji czynnej z matrycy."
+  },
+  "FentanylTransdermal": {
+    "index": 5,
+    "name": "Fentanyl (transdermalnie)",
+    "text1": "Ostrożnie u pacjentów z nadmierną potliwością i gorączką. Istnieje ryzyko zwiększenia stężenia substancji czynnej w skutek nadmiernego uwalniania substancji czynnej z matrycy",
+    "text2": "Ostrożnie u pacjentów z hipoproteinemią (niedobór białek)",
+    "text3": "Fentanyl TTS rekomendowany jest do leczenia w bólu stabilnym, nie wymagającym częstej zmiany dawki",
+    "text4": "Do ustalenia dawki początkowej Fentanylu TTS powinno się dostosować inne opioidy krótko działające, oksykodon IR, morfina IR, tramadol w kroplach"
+  },
+  "Oxycodone": {
+    "index": 10,
+    "name": "Oksykodon, chlorowodorek (tbl. doustne, i.v., s.c.)",
+    "text1": "Rozważ zastosowanie połączenia oksykodonu z naloksonem w przypadku konieczności redukcji zespołu poopioidowej dysfunkcji jelit lub zaparć występujących u pacjenta w trakcie leczenia lekami opioidowymi."
+  },
+  "kidneyFailure": {
+    "text1": "U pacjentów z niewydolnością nerek rekomendowanym opioidem jest buprenorfina."
+  }
+}

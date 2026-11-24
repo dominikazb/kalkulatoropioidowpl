@@ -1,0 +1,39 @@
+<ng-container *ngIf="opioidService.opioidToConvertToWasChosen(results)">
+  <div class="dark_gray_background">
+    <ng-container *ngIf="results.opioidToConvertToIndex !== opioidIndices.Methadone.valueOf()">
+      <opioid-conversion-to
+        [listOfProposedBuprenorphinePlasters]="listOfProposedBuprenorphinePlasters"></opioid-conversion-to>
+    </ng-container>
+
+    <ng-container *ngIf="results.opioidToConvertToIndex === opioidIndices.Methadone.valueOf()">
+      <methadone-conversion-to></methadone-conversion-to>
+    </ng-container>
+
+    <ng-container *ngIf="results.opioidToConvertToIndex === opioidIndices.FentanylTransdermal.valueOf()
+      && listOfProposedFentanylPlasters.length > 0">
+      <plaster-list
+          [listOfProposedPlasters]="listOfProposedFentanylPlasters"></plaster-list>
+    </ng-container>
+
+    <ng-container *ngIf="results.opioidToConvertToIndex === opioidIndices.BuprenorphineTransdermal.valueOf()
+      && listOfProposedBuprenorphinePlasters.length > 0">
+      <plaster-list
+        [listOfProposedPlasters]="listOfProposedBuprenorphinePlasters"></plaster-list>
+    </ng-container>
+
+    <ng-container *ngIf="results.opioidToConvertToDoseExceeded">
+      <div class="padding_top_20px"></div>
+      <div class="red_background">
+        <div class="row">
+          <div class="col-md-1 d-flex justify-content-center align-items-center fontsize_25 padding_bottom_top_15_small_screen">
+              <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="col-md-11 d-flex text-justify align-items-center">
+            <h6>{{contentService.opioidInfoData[results.opioidToConvertToIndex].warning}}</h6>
+          </div>
+        </div>
+      </div>
+      <div class="padding_bottom_10px"></div>
+    </ng-container>
+  </div>
+</ng-container>

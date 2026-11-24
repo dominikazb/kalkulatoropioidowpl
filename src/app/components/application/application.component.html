@@ -1,0 +1,150 @@
+<div class="main_div">
+  <div class="empty_space_20px"></div>
+  <div class="content">
+    <div class="content_inside">
+      <h4 class="title">{{contentService.applicationData.title}}</h4>
+      <hr class="padding_bottom_10px">
+
+      <form [formGroup]="opioidConversionForm" (ngSubmit)="onSubmit()">
+        <h5>{{contentService.applicationData.conversionFromText}}</h5>
+
+        <div id="standardOpioid__wrapper">
+          <input formControlName="standardOpioid"
+                 id="standardOpioid"
+                 name="standardOpioid"
+                 type="text">
+        </div>
+
+        <div id="zeroOpioid__wrapper" class="form-group col-md-2">
+          <input type="text"
+                 class="form-control"
+                 [(ngModel)]="zeroOpioidText"
+                 [id]="opioidConversionFormFields.zeroOpioid"
+                 [name]="opioidConversionFormFields.zeroOpioid"
+                 [formControlName]="opioidConversionFormFields.zeroOpioid">
+        </div>
+
+        <div class="converted_opioid__wrapper_top">
+          <form-opioid
+            [name]="opioidConversionFormFields.firstOpioid"
+            [parentFormGroup]="opioidConversionForm">
+          </form-opioid>
+        </div>
+        <div class="padding_bottom_20px"></div>
+
+        <h6 class="text_color__gray padding_bottom_10px">{{contentService.applicationData.optionallyText}}</h6>
+
+        <div class="converted_opioid__wrapper">
+          <a class="link_beige display_none padding_top_5px"
+            (click)="toggleSecondOpioidIsCollapsed()">
+            <i class="fas fa-plus-circle"></i> {{contentService.applicationData.addAnotherText}}
+          </a>
+
+          <div class="padding_bottom_10px"></div>
+
+          <div [ngClass]="secondOpioidIsCollapsed ? 'collapsed' : 'not_collapsed'">
+            <form-opioid
+              [name]="opioidConversionFormFields.secondOpioid"
+              [parentFormGroup]="opioidConversionForm">
+            </form-opioid>
+          </div>
+        </div>
+
+        <div class="padding_bottom_20px"></div>
+
+        <div class="converted_opioid__wrapper">
+          <a class="link_beige display_none padding_top_5px"
+             (click)="toggleThirdOpioidIsCollapsed()">
+            <i class="fas fa-plus-circle"></i> {{contentService.applicationData.addAnotherText}}
+          </a>
+
+          <div class="padding_bottom_10px"></div>
+
+          <div [ngClass]="thirdOpioidIsCollapsed ? 'collapsed' : 'not_collapsed'">
+            <form-opioid
+              [name]="opioidConversionFormFields.thirdOpioid"
+              [parentFormGroup]="opioidConversionForm">
+            </form-opioid>
+          </div>
+        </div>
+
+        <div class="padding_bottom_20px"></div>
+
+        <div class="converted_opioid__wrapper">
+          <a class="link_beige display_none padding_top_5px"
+             (click)="toggleFentanylIsCollapsed()">
+            <i class="fas fa-plus-circle"></i> {{contentService.applicationData.fentanylText}}
+          </a>
+
+          <div class="padding_bottom_10px"></div>
+
+          <div [ngClass]="fentanylIsCollapsed ? 'collapsed' : 'not_collapsed'">
+            <form-fentanyl [parentFormGroup]="opioidConversionForm"></form-fentanyl>
+          </div>
+        </div>
+
+        <div class="padding_bottom_20px"></div>
+
+        <div class="converted_opioid__wrapper">
+          <a class="link_beige display_none padding_top_5px"
+             (click)="toggleBuprenorphineIsCollapsed()">
+            <i class="fas fa-plus-circle"></i> {{contentService.applicationData.buprenorphineText}}
+          </a>
+
+          <div class="padding_bottom_10px"></div>
+
+          <div [ngClass]="buprenorphineIsCollapsed ? 'collapsed' : 'not_collapsed'">
+            <form-buprenorphine [parentFormGroup]="opioidConversionForm"></form-buprenorphine>
+          </div>
+        </div>
+
+        <div class="padding_bottom_20px"></div>
+
+        <div class="converted_opioid__wrapper">
+          <div class="form-group form-check padding_top_15px">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="kidneyDisease"
+              formControlName="kidneyCheckbox"
+              name="kidneyCheckbox">
+            <label class="form-check-label text_color__darker_gray" for="kidneyDisease">{{contentService.applicationData.kidneyCheckbox}}</label>
+          </div>
+        </div>
+
+        <hr class="padding_bottom_20px">
+
+        <form-conversion-to [parentFormGroup]="opioidConversionForm"></form-conversion-to>
+
+        <div class="d-flex justify-content-end padding_bottom_20px">
+          <div class="row">
+            <div class="col-md-6 d-flex justify-content-end"></div>
+            <div class="col-md-3 d-flex justify-content-end">
+              <input class="btn btn-secondary my-1 btn-block mr-1"
+                     type="reset"
+                     value="{{contentService.applicationData.btnResetText}}">
+            </div>
+            <div class="col-md-3 d-flex justify-content-end">
+              <input [disabled]="(opioidConversionForm.controls['zeroOpioid'].value !== null &&
+                                 opioidConversionForm.controls['zeroOpioid'].touched &&
+                                 opioidConversionForm.controls['zeroOpioid'].value.trim().length >= 0) ||
+                                 (opioidConversionForm.controls['standardOpioid'].touched ||
+                                 (opioidConversionForm.controls['standardOpioid'].value !== null &&
+                                 opioidConversionForm.controls['standardOpioid'].value.trim().length >= 0))"
+                     class="btn btn-danger my-1 btn-block mr-1"
+                     type="submit"
+                     value="{{contentService.applicationData.btnCalculateText}}">
+            </div>
+          </div>
+        </div>
+
+        <hr class="padding_bottom_20px">
+
+        <app-branding-footer
+          [showBrandingFooterText]=true></app-branding-footer>
+
+      </form>
+    </div>
+  </div>
+  <div class="empty_space_20px"></div>
+</div>
